@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calculator {
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+}
+
+.operation-display {
+    background-color: #3a3a3a;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.operation-text {
+    font-size: 1.1rem;
+    color: #cccccc;
+    font-weight: normal;
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    transition: all 0.2s ease;
+}
+
+.display {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.display-text {
+    font-size: 2.5rem;
+    color: #00ff88;
+    font-weight: bold;
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.button {
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70px;
+    font-family: inherit;
+}
+
+.button:hover {
+    filter: brightness(1.1);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.button.number {
+    background-color: #d4d4d4;
+    color: #000;
+}
+
+.button.operator {
+    background-color: #ff9500;
+    color: #fff;
+}
+
+.button.equals {
+    background-color: #ff3b30;
+    color: #fff;
+    grid-column: span 2;
+}
+
+.button.clear {
+    background-color: #a6a6a6;
+    color: #000;
+}
+
+.button.zero {
+    grid-column: span 2;
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .display {
+        height: 80px;
+        padding: 15px;
+    }
+
+    .display-text {
+        font-size: 2rem;
+    }
+
+    .button {
+        min-height: 60px;
+        font-size: 1.1rem;
+    }
+}
